@@ -34,4 +34,14 @@ export default {
     border-radius: 15px;
   
 }
+
+@media screen and (max-width: 1024px) {
+
+.videos{
+  width: 100%;
+  height: 200px;
+}
+  
+
+}
 </style>

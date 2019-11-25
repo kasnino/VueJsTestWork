@@ -97,4 +97,25 @@ strong {
     cursor: pointer;
     margin: 3px;
 }
+
+@media screen and (max-width: 1024px) {
+
+.contenedor-welcome{
+  
+    display: grid;
+    grid-template-columns: 73% 27%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    width: 100%;
+   
+    background: #038287;
+     border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; 
+  
+   
+}
+}
 </style>

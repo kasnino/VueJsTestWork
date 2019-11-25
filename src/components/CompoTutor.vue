@@ -29,4 +29,17 @@ export default {
     height: 90%;
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+.imagen-tutor {
+
+    img{
+     
+      height: 90%;
+    }
+}
+
+
+}
 </style>

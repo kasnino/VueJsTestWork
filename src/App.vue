@@ -2,17 +2,12 @@
   <div id="app">
     <div class="contenedor">
      <router-view />
-     
        <div class="contenfilados">
          <div class="conten-nav">
-          
-         
-
             <div class="back">
                 <!-- <i class="fas fa-arrow-circle-left"></i> -->
                    <i class="fas fa-angle-left"></i>
             </div>
-             
              <div id="nav">
               <router-link to="/">1</router-link> |
               <router-link to="/about">2</router-link> |
@@ -20,13 +15,9 @@
               <router-link to="/test">4</router-link> |
               <router-link to="/fin">5</router-link> |
             </div>
-
             <div class="next">
-             
               <i class="fas fa-angle-right"></i>
             </div>
-         
-         
            </div>
              </div>
              </div>
@@ -102,14 +93,14 @@ export default {
 .contenfilados{
     width: 100%;
     height: 100%;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
 } 
 
 .conten-nav{
-    width: 939px;
+    width: 80%;
     height: 80px;
     display: grid;
     justify-content: center;
@@ -143,4 +134,30 @@ export default {
   color: #038287;
 }
   
+
+  @media screen and (max-width: 1024px) {
+
+  .contenedor{
+  
+  width: 100%;
+  height: 758px;
+  display: grid;
+  grid-template-columns: repeat(1,100%); 
+  grid-template-rows: 40% 50% 10%;
+  }
+
+  .contenfila{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2,50%); 
+}
+
+.contenfilados {
+    width: 100%;
+    height: 708px;
+    align-items: flex-end;
+}
+
+}
 </style>

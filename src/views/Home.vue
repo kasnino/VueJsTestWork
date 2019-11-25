@@ -4,7 +4,7 @@
           <div class="contenfila">
             <div class="conten-icon">
                <CompIcon></CompIcon>
-               <div class="tutor">
+               <div class="tutor" >
                 <CompoTutor></CompoTutor>
                 </div>
             </div>
@@ -14,20 +14,6 @@
              </div>
           </div>
           <div class="contenfilados">
-            <!-- <TimeLine></TimeLine> -->
-            
-    <!-- <div class="conten-nav">
-          <div id="nav">
-              <router-link to="/">1</router-link> |
-              <router-link to="/about">2</router-link> |
-              <router-link to="/description">3</router-link> |
-              <router-link to="/test">4</router-link> |
-              <router-link to="/fin">5</router-link> |
-<br>
-         
-          </div>
-           </div> -->
-           
           </div>
       </div>
     </div>
@@ -66,12 +52,14 @@ export default {
 
 .tutor{
   width: 100%;
-    height: 60%;
+    /* height: 60%; */
     background: #038287;
     margin-top: 18px;
     border-top-right-radius: 200px;
     border-bottom-right-radius: 200px;
     justify-content: center;
+      animation-duration: 1s;
+  animation-name: slidein;
 }
 .contenfila{
   width: 100%;
@@ -98,5 +86,50 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
+
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -240px;
+    
+  }
+
+  to {
+    margin-left: 0%;
+
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .contenedor{
+  width: 100%;
+  height: 758px;
+  display: grid;
+  grid-template-columns: repeat(1,100%); 
+  grid-template-rows: 40% 50% 10%;
+  }
+
+  .contenfila{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2,50%);
+  grid-template-columns: repeat(1, 1fr); 
+}
+
+.tutor{
+  width: 45%;
+   height: 100%; 
+ 
+}
+
+.conten-form-grid{
+margin-top:18%;
+  
+}
+
 }
 </style>

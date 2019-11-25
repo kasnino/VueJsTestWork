@@ -2,11 +2,11 @@
   <div class="about">
    <div class="contenedor-about">
       <div class="avatar-conten">
-
-         <div  class="imagen-turo"> 
+           <div  class="imagen-turo"> 
             <div class="centrar-titulo"><h1>Capacitate!</h1>  
             </div>
-                <img src="../assets/img/logo.png" alt="" class="tutor">
+            <div class="logogrid"><img src="../assets/img/logo.png" alt="" class="tutor"></div>
+                
            </div> 
           <TutorAvatar></TutorAvatar>
       </div>
@@ -50,6 +50,7 @@ export default {
 width: 100%;
 height: 100%;
 grid-template-columns: repeat(2, 50%);
+// background: pink;
 // background: red;
 display: grid;
 }
@@ -67,7 +68,7 @@ display: grid;
 .mostrar-contenido{
   display:  grid;
   grid-template-rows: 70% 30%;
-  // background: black;
+  //  background: black;
 }
 
 .descargar{
@@ -92,13 +93,15 @@ display: grid;
     width: 65%;
     height: 100%;
     display: grid;
-    grid-template-columns: 35% 35%;
+    grid-template-columns: 70% 30%;
     justify-content: flex-end;
     align-content: center;
     background: #731b8b;
      border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     margin-bottom: 35px;
+        animation-duration: 1.5s;
+  animation-name: slidein;
   
 }
    img{
@@ -110,6 +113,7 @@ display: grid;
 }
 
 .centrar-titulo{
+  width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -118,5 +122,80 @@ display: grid;
    font: 600 28px/1 "Poppins", sans-serif;
    color: white;
    margin-right: 20px;
+  
+}
+
+.logogrid{
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -240px;
+    
+  }
+
+  to {
+    margin-left: 0%;
+     width: 65%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+.contenedor-about{
+width: 100%;
+height: 100%;
+grid-template-columns: repeat(1, 100%);
+grid-template-rows: repeat(2, 1fr);
+// background: pink;
+// background: red;
+display: grid;
+}
+
+.imagen-turo{
+    width: 100%;
+    height: 55%;
+  animation-duration: 1.5s;
+  animation-name: slideindos;
+   display: grid;
+    grid-template-columns: 75% 25%;
+     justify-content: flex-end;
+     
+}
+
+
+
+@keyframes slideindos {
+  from {
+    margin-left: -240px;
+    
+  }
+  to {
+    margin-left: 0%;
+     width: 100%;
+  }
+}
+
+ img{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logogrid{
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
 }
 </style>

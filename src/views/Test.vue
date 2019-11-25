@@ -7,12 +7,15 @@
                             <img src="../assets/img/tutor-circ.png" alt="" class="tutor">
                         </div>
                         <div class="centrar-titulo">
-                          <h1>Seleccione la Respuesta que Considere correcta...!
+                          <h1>Seleccione <br> la Respuesta que Considere correcta...!
                           </h1>  
                         </div>
                   </div> 
             </div>
-    <TestCompo></TestCompo>
+            <div class="caja-form">
+               <TestCompo></TestCompo>
+            </div>
+   
     </div>
   </div>
 </template>
@@ -26,12 +29,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.contenedor {
+  height: 900px;
+  widows: 100%;
+}
 .imagen-turo{
       width: 60%;
     height: 15%;
 
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 20% 80%;
     -webkit-box-pack: unset;
     -ms-flex-pack: end;
     justify-content: space-between;
@@ -44,7 +52,8 @@ export default {
     position: absolute;
     right: -42px;
     margin-top: 10px;
-  
+      animation-duration: 1s;
+  animation-name: slidein;
 }
    img{
     width: 70px;
@@ -58,17 +67,40 @@ export default {
 
 .conten-test{
 display: grid;
-grid-template-rows: 30% 70%;
+grid-template-rows: 13% 87%;
+    width: 100%;
+    height: 100%;
+    
+   
 }
 
 .centrar-titulo{
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: initial;
   display: grid;
   font-size: 25px;
    font: 600 28px/1 "Poppins", sans-serif;
    color: white;
    margin-right: 20px;
+}
+
+.caja-form{
+  width: 100%;
+  height: 100%;
+  
+  margin-top: 40px;
+}
+
+@keyframes slidein {
+  from {
+    margin-right: -100%;
+    
+  }
+
+  to {
+    margin-right: 0%;
+    width: 60%;
+  }
 }
 </style>

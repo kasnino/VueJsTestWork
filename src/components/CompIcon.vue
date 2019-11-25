@@ -1,6 +1,6 @@
 <template>
     <div class="logomain">
-        <div class="contenedor-welcome">
+        <div class="contenedor-welcome" transition="expand">
                 <div class="description-welcome">
                     <span>Bienvenido hoy seras un estudiante virtual  </span>
                 </div>
@@ -36,7 +36,7 @@ export default {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: 70% 30%;
     justify-content: center;
     align-content: center;
      width: 70%;
@@ -45,7 +45,8 @@ export default {
      border-top-right-radius: 58px;
     border-bottom-right-radius: 58px;
     margin-top: 5px;
-   
+   animation-duration: 1.5s;
+  animation-name: slidein;
 }
 
 .description-welcome{
@@ -66,7 +67,7 @@ export default {
     	margin-left: 20px;
     }
 .imagen-turo{
-        width: 100%;
+    width: 100%;
     height: 100%;
     display: grid;
     justify-content: flex-end;
@@ -79,5 +80,49 @@ export default {
     margin: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -240px;
+    
+  }
+
+  to {
+    margin-left: 0%;
+    width: 75%;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+.contenedor-welcome{
+    width: 100%;
+    height: 100%;
+      display: grid;
+    grid-template-columns: 70% 30%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.description-welcome{
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+   
+}
+
+span {
+     font-size: 30px;
+    }
+
 }
 </style>

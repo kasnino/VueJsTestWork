@@ -214,7 +214,7 @@ methods: {
 --ColorLetrasDescription: #000;
 };
 .fomrulario{
-  width: 500px;
+  width: 80%;
   height: 580px;
   background: white;
   display: flex;

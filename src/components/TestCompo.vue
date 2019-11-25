@@ -6,11 +6,13 @@
 <div class="parte-uno">
              <div class="checkbox">
             <span class="pregunta">La cultura Virtual es...</span>
-            <input class="checkbox-rem" id="checkbox-rem" type="checkbox" value="1" />
-            <label for="checkbox-rem">La cultura que esta emergiendo del uso de las TICs para la comunicacion, el entretenimiento y el mercadeo electronico.
+            <input 
+			@change="evento()"
+			class="checkbox-rem" id="checkbox-rem" type="checkbox" value="1" />
+            <label 
+			for="checkbox-rem">La cultura que esta emergiendo del uso de las TICs para la comunicacion, el entretenimiento y el mercadeo electronico.
                 <span class="box"></span>
             </label>
-
             <input id="checkbox-1" type="checkbox" value="2" />
             <label for="checkbox-1">La cultura de los elemetos y el chat... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 
@@ -23,32 +25,57 @@
                 <span class="box"></span>
             </label>
             </div>
-            <br>
+        
 </div>
+		<div class="grid-columnas">
+              <div class="parte-dos">  
+				  <div class="checkbox">
+							<span class="pregunta">La Educacion Virtual Permite...</span>
 
-              <!-- <div class="parte-dos">  
-            <span class="pregunta">La Educacion Virtual Permite...</span>
+							<input id="checkbox-rema" type="checkbox" value="4" />
+							<label for="checkbox-rema">La cultura que esta emergiendo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<span class="box"></span>
+							</label>
 
-            <input id="checkbox-rema" type="checkbox" value="4" />
-            <label for="checkbox-rema">La cultura que esta emergiendo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <span class="box"></span>
-            </label>
+							<input id="checkbox-13" type="checkbox" value="5" />
+							<label for="checkbox-13">La cultua de los elemtos y el chat...Duis aute irure dolor in reprehenderit in voluptate velit esse
 
-            <input id="checkbox-13" type="checkbox" value="5" />
-            <label for="checkbox-13">La cultua de los elemtos y el chat...Duis aute irure dolor in reprehenderit in voluptate velit esse
+								<span class="box"></span>
+								<span class="box"></span>
+							</label>
 
-                <span class="box"></span>
-                <span class="box"></span>
-            </label>
+							<input id="checkbox-21" type="checkbox" value="6" />
+							<label for="checkbox-21">La cultua de los elemtos y el chat...cillum dolore eu fugiat nulla pariatur.
+								<span class="box"></span>
+							</label>
+				     </div>
+                </div>
+        
 
-            <input id="checkbox-21" type="checkbox" value="6" />
-            <label for="checkbox-21">La cultua de los elemtos y el chat...cillum dolore eu fugiat nulla pariatur.
-                <span class="box"></span>
-            </label>
+			   <div class="parte-tres">  
+				  <div class="checkbox">
+						<span class="pregunta">La Educacion Virtual Permite...</span>
 
-                </div> -->
-            <br>
+						<input id="checkbox-rema2" type="checkbox" value="4" />
+						<label for="checkbox-rema2">La cultura que esta emergiendo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<span class="box"></span>
+						</label>
 
+						<input id="checkbox-132" type="checkbox" value="5" />
+						<label for="checkbox-132">La cultua de los elemtos y el chat...Duis aute irure dolor in reprehenderit in voluptate velit esse
+
+							<span class="box"></span>
+							<span class="box"></span>
+						</label>
+
+						<input id="checkbox-212" type="checkbox" value="6" />
+						<label for="checkbox-212">La cultua de los elemtos y el chat...cillum dolore eu fugiat nulla pariatur.
+							<span class="box"></span>
+						</label>
+					</div>
+                </div>
+        
+		</div>
 
 
         
@@ -70,19 +97,34 @@
 
 <script>
 export default {
-    components: {}
+	components: {},
+	data(){
+		return {}
+
+	},
+
+	methods: {
+
+		evento(){
+			console.log("cambio el chet!!")
+			return true
+		}
+	}
 }
 </script>
 
 
 <style lang="scss" scoped>
-
+.contenedor {
+  height: 900px;
+  widows: 100%;
+}
 .checkbox {
 	display: grid;
     -moz-user-select: none;
     -ms-user-select: none;
     width: 100%;
-    grid-template-rows: repeat(3, 11%);
+    grid-template-rows: repeat(3, 14%);
     grid-template-columns: repeat(1, 100%);
     justify-content: center;
     align-items: center;
@@ -96,7 +138,7 @@ export default {
 		cursor: pointer;
 		font-weight: 500;
 		padding-left: 35px;
-		margin: 18px;
+		
 
 	}
   span.box {
@@ -151,6 +193,8 @@ input:checked {
 
 .checkbox{
   margin: 10px;
+  padding: 4px;
+  font-size: 14px;
   
 }
 
@@ -214,12 +258,10 @@ input.button,
 	width: 100%;
     border-radius: 10px;
     margin: 25px;
-    background: #FFF;
     box-shadow: 0 3px 15px rgba(51, 51, 51, 0.2);
-   
-      height: 250px;
+	height: 100%;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 45% 55%;
     justify-content: center;
     align-items: center;
 }
@@ -237,6 +279,30 @@ input.button,
     display: flex;font-size: 20px;
     font-weight: bold;
 
+
+}
+
+.grid-columnas {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	width: 100%;
+	height: 100%;
+	
+}
+
+.parte-dos{
+	width: 100%;
+	height: 100%;
+
+	  display: grid;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.parte-tres{
+	width: 100%;
+	height: 100%;
 
 }
 </style>
